@@ -21,8 +21,8 @@ defmodule IsChinese do
 
   defp in_range?(codepoint) do
     << int_val :: utf8 >> = codepoint
-    Enum.any? @chinese_range, fn(r) -> 
-      int_val > elem(r,0) && int_val < elem(r, 1)
+    Enum.any? @chinese_range, fn(r) ->
+      int_val >= elem(r,0) && int_val <= elem(r, 1)
     end
   end
 end
