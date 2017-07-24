@@ -3,7 +3,7 @@ defmodule IsChinese.Mixfile do
 
   def project do
     [app: :is_chinese,
-     version: "1.0.0",
+     version: "1.0.1",
      elixir: "~> 1.2",
      description: description(),
      package: package(),
@@ -44,6 +44,6 @@ defmodule IsChinese.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
   end
 end
